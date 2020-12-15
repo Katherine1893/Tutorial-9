@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kansas Wages</title>
+    <!-- import your final project's stylesheet and Google Fonts -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- link to DataTable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
+    
+    <!-- import your final project's javascript files -->
+    <script src="https://kit.fontawesome.com/740e6c08cb.js" crossorigin="anonymous"></script>
+    <!-- please just use this line for this project only as it contains my own Font Awesome key -->
+
+    <!-- import external scripts from other JS libraries -->
+    <!-- Highcharts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/dumbbell.js"></script>
+    <script src="https://code.highcharts.com/modules/lollipop.js"></script>
+
+    <!-- DataTable-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div id="data-table">
+        <table id="dt-table" >
+            <thead>
+                <tr>
+                    <th>Occupation code</th>
+                    <th>Occupation title </th>
+                    <th>Employment</th>
+                    <th>Location quotient</th>
+                    <th>Median hourly wage</th>
+                    <th>Mean hourly wage</th>
+                    <th>Annual mean wage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>27-1011</td>
+                    <td>Art Directors</td>
+                    <td>400</td>
+                    <td>0.98</td>
+                    <td>35.09</td>
+                    <td>39.58</td>
+                    <td>82320</td>
+                </tr>
+                <tr>
+                    <td>27-1014</td>
+                    <td>Special Effects Artists and Animators</td>
+                    <td>80</td>
+                    <td>0.28</td>
+                    <td>31.21</td>
+                    <td>32.84</td>
+                    <td>68310</td>
+                </tr>
+                <tr>
+                    <td>27-1021</td>
+                    <td>Commercial and Industrial Designers</td>
+                    <td>150</td>
+                    <td>0.47</td>
+                    <td>30.11</td>
+                    <td>33.31</td>
+                    <td>69290</td>
+                </tr>
+                <tr>
+                    <td>27-1022</td>
+                    <td>Fashion Designers</td>
+                    <td>80</td>
+                    <td>0.36</td>
+                    <td>25.04</td>
+                    <td>29.47</td>
+                    <td>61290</td>
+                </tr>
+                <tr>
+                    <td>27-1023</td>
+                    <td>Floral Designers</td>
+                    <td>460</td>
+                    <td>1.17</td>
+                    <td>11.49</td>
+                    <td>12.33</td>
+                    <td>25640</td>
+                </tr>
+                <tr>
+                    <td>27-1024</td>
+                    <td>Graphic Designers</td>
+                    <td>2420</td>
+                    <td>1.18</td>
+                    <td>21.39</td>
+                    <td>22.25</td>
+                    <td>46270</td>
+                </tr>
+                <tr>
+                    <td>27-1025</td>
+                    <td>Interior Designers</td>
+                    <td>490</td>
+                    <td>0.85</td>
+                    <td>25.3</td>
+                    <td>27.49</td>
+                    <td>57180</td>
+                </tr>
+                <tr>
+                    <td>27-1026</td>
+                    <td>Merchandise Displayers and Window Trimmers</td>
+                    <td>1270</td>
+                    <td>0.95</td>
+                    <td>13.41</td>
+                    <td>14.39</td>
+                    <td>29930</td>
+                </tr>
+                <tr>
+                    <td>27-1027</td>
+                    <td>Set and Exhibit Designers</td>
+                    <td>40</td>
+                    <td>0.32</td>
+                    <td>18.89</td>
+                    <td>18.67</td>
+                    <td>38830</td>
+                </tr>
+                <tr>
+                    <td>27-1029</td>
+                    <td>Designers, All Other</td>
+                    <td>-8</td>
+                    <td>-8</td>
+                    <td>23.22</td>
+                    <td>28.95</td>
+                    <td>60220</td>
+                </tr>
+                <tr>
+                    <td>27-2012</td>
+                    <td>Producers and Directors</td>
+                    <td>390</td>
+                    <td>0.32</td>
+                    <td>23.91</td>
+                    <td>29.22</td>
+                    <td>60780</td>
+                </tr>
+                <tr>
+                    <td>27-2021</td>
+                    <td>Athletes and Sports Competitors</td>
+                    <td>80</td>
+                    <td>0.78</td>
+                    <td>-4</td>
+                    <td>-4</td>
+                    <td>64310</td>
+                </tr>
+                <tr>
+                    <td>27-2022</td>
+                    <td>Coaches and Scouts</td>
+                    <td>3990</td>
+                    <td>1.74</td>
+                    <td>-4</td>
+                    <td>-4</td>
+                    <td>30490</td>
+                </tr>
+                <tr>
+                    <td>27-2023</td>
+                    <td>Umpires, Referees, and Other Sports Officials</td>
+                    <td>950</td>
+                    <td>4.99</td>
+                    <td>-4</td>
+                    <td>-4</td>
+                    <td>34200</td>
+                </tr>
+                <tr>
+                    <td>27-2041</td>
+                    <td>Music Directors and Composers</td>
+                    <td>60</td>
+                    <td>0.61</td>
+                    <td>22.19</td>
+                    <td>22.22</td>
+                    <td>46230</td>
+                </tr>
+                <tr>
+                    <td>27-2042</td>
+                    <td>Musicians and Singers</td>
+                    <td>390</td>
+                    <td>1</td>
+                    <td>20.7</td>
+                    <td>24.41</td>
+                    <td>-4</td>
+                </tr>
+                <tr>
+                    <td>27-3011</td>
+                    <td>Broadcast Announcers and Radio Disc Jockeys</td>
+                    <td>470</td>
+                    <td>1.71</td>
+                    <td>13.3</td>
+                    <td>17.78</td>
+                    <td>36980</td>
+                </tr>
+                <tr>
+                    <td>27-3023</td>
+                    <td>News Analysts, Reporters, and Journalists</td>
+                    <td>330</td>
+                    <td>0.8</td>
+                    <td>16.75</td>
+                    <td>21.37</td>
+                    <td>44450</td>
+                </tr>
+                <tr>
+                    <td>27-3031</td>
+                    <td>Public Relations Specialists</td>
+                    <td>1870</td>
+                    <td>0.81</td>
+                    <td>24.65</td>
+                    <td>27.55</td>
+                    <td>57310</td>
+                </tr>
+                <tr>
+                    <td>27-3041</td>
+                    <td>Editors</td>
+                    <td>600</td>
+                    <td>0.65</td>
+                    <td>23.28</td>
+                    <td>24.48</td>
+                    <td>50910</td>
+                </tr>
+                <tr>
+                    <td>27-3042</td>
+                    <td>Technical Writers</td>
+                    <td>560</td>
+                    <td>1.17</td>
+                    <td>29.06</td>
+                    <td>30.8</td>
+                    <td>64070</td>
+                </tr>
+                <tr>
+                    <td>27-3043</td>
+                    <td>Writers and Authors</td>
+                    <td>250</td>
+                    <td>0.58</td>
+                    <td>24.19</td>
+                    <td>28.96</td>
+                    <td>60230</td>
+                </tr>
+                <tr>
+                    <td>27-3091</td>
+                    <td>Interpreters and Translators</td>
+                    <td>400</td>
+                    <td>0.71</td>
+                    <td>17.64</td>
+                    <td>20.35</td>
+                    <td>42330</td>
+                </tr>
+                <tr>
+                    <td>27-3092</td>
+                    <td>Court Reporters and Simultaneous Captioners</td>
+                    <td>230</td>
+                    <td>1.7</td>
+                    <td>25.61</td>
+                    <td>24.41</td>
+                    <td>50770</td>
+                </tr>
+                <tr>
+                    <td>27-3099</td>
+                    <td>Media and Communication Workers, All Other</td>
+                    <td>50</td>
+                    <td>0.21</td>
+                    <td>23.06</td>
+                    <td>24.86</td>
+                    <td>51710</td>
+                </tr>
+                <tr>
+                    <td>27-4011</td>
+                    <td>Audio and Video Technicians</td>
+                    <td>280</td>
+                    <td>0.4</td>
+                    <td>24.03</td>
+                    <td>25.13</td>
+                    <td>52270</td>
+                </tr>
+                <tr>
+                    <td>27-4012</td>
+                    <td>Broadcast Technicians</td>
+                    <td>140</td>
+                    <td>0.51</td>
+                    <td>16.53</td>
+                    <td>19.39</td>
+                    <td>40340</td>
+                </tr>
+                <tr>
+                    <td>27-4021</td>
+                    <td>Photographers</td>
+                    <td>320</td>
+                    <td>0.66</td>
+                    <td>15.46</td>
+                    <td>16.3</td>
+                    <td>33900</td>
+                </tr>
+                <tr>
+                    <td>27-4031</td>
+                    <td>Camera Operators, Television, Video, and Film</td>
+                    <td>170</td>
+                    <td>0.82</td>
+                    <td>22.09</td>
+                    <td>20.84</td>
+                    <td>43350</td>
+                </tr>
+                <tr>
+                    <td>27-4032</td>
+                    <td>Film and Video Editors</td>
+                    <td>40</td>
+                    <td>0.17</td>
+                    <td>19.87</td>
+                    <td>21.22</td>
+                    <td>44140</td>
+                </tr>
+                <tr>
+                    <td>27-4098</td>
+                    <td>Lighting Technicians and Media and Communication Equipment Workers, All 
+Other</td>
+                    <td>60</td>
+                    <td>0.28</td>
+                    <td>35.31</td>
+                    <td>33.49</td>
+                    <td>69650</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- if you are using Highchart JS, add a pair of script tags below and write the code in between; make sure you replace "container" with "graphic-1"-->
+     <div id="chart"></div>
+     <script>
+         Highcharts.chart('chart', {
+    chart: {
+    type: 'lollipop'
+    },
+    title: {
+    text: 'Art and Entertainment Annual Wages in Kansas'
+    },
+    xAxis: {
+    categories: ['Art Directors','Special Effects Artists and Animators','Commercial and Industrial Designers','Fashion Designers','Floral Designers','Graphic Designers','Interior Designers','Merchandise Displayers and Window Trimmers','Set and Exhibit Designers','Designers and All Other','Producers and Directors','Athletes and Sports Competitors','Coaches and Scouts','Umpires, Referees, and Other Sports Officials','Music Directors and Composers','Musicians and Singers','Broadcast Announcers and Radio Disc Jockeys','News Analysts, Reporters, and Journalists','Public Relations Specialists','Editors','Technical Writers','Writers and Authors','Interpreters and Translators','Court Reporters and Simultaneous Captioners','Media and Communication Workers, All Other','Audio and Video Technicians','Broadcast Technicians','Photographers','Camera Operators, Television, Video, and Film','Film and Video Editors','Lighting Technicians and Media and Communication Equipment Workers, All Other']
+    },
+    yAxis: {
+    title: {
+    text: ''
+    }
+    },
+    tooltip: {
+shared: true
+},
+    series: [{
+    name: 'Annual Wage',
+    data: [82320,68310,69290,61290,25640,46270,57180,29930,38830,60220,60780,64310,30490,34200,46230,-4,36980,44450,57310,50910,64070,60230,42330,50770,51710,52270,40340,33900,43350,44140,69650]
+    }, {
+    }]
+    });
+     </script>
+    </div>
+</body>
+
+</html>
